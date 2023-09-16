@@ -67,7 +67,7 @@ class ViewController: UICollectionViewController {
             cell.accessibilityTraits = [.staticText]
         }
         
-        print("Frame \(cell.frame) an \(indexPath)")
+//        print("Frame \(cell.frame) an \(indexPath)")
         return cell
     }
 }
