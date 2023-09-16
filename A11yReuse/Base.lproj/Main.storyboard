@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2vf-R2-CtT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2vf-R2-CtT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22129"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +13,7 @@
         <scene sceneID="iYf-fC-dIy">
             <objects>
                 <collectionViewController id="2vf-R2-CtT" customClass="ViewController" customModule="A11yReuse" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gi5-1d-hvS">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gi5-1d-hvS" customClass="CollectionView" customModule="A11yReuse" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -24,21 +25,24 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="MuE-tc-3Cg" customClass="Cell" customModule="A11yReuse" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="58" height="129"/>
+                                <rect key="frame" x="38.666666666666664" y="0.0" width="316" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="USJ-Dg-HcF">
-                                    <rect key="frame" x="0.0" y="0.0" width="58" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOn-aV-wKl">
-                                            <rect key="frame" x="8" y="54" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="20" width="300" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="dVV-5k-E1r"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="XOn-aV-wKl" firstAttribute="top" secondItem="USJ-Dg-HcF" secondAttribute="top" constant="54" id="ALk-pI-rpV"/>
+                                        <constraint firstItem="XOn-aV-wKl" firstAttribute="top" secondItem="USJ-Dg-HcF" secondAttribute="top" constant="20" id="ALk-pI-rpV"/>
                                         <constraint firstItem="XOn-aV-wKl" firstAttribute="centerX" secondItem="USJ-Dg-HcF" secondAttribute="centerX" id="ZIo-Pt-VDc"/>
                                         <constraint firstItem="XOn-aV-wKl" firstAttribute="leading" secondItem="USJ-Dg-HcF" secondAttribute="leading" constant="8" id="atY-HW-x2V"/>
                                         <constraint firstItem="XOn-aV-wKl" firstAttribute="centerY" secondItem="USJ-Dg-HcF" secondAttribute="centerY" id="xJk-ag-rwa"/>
