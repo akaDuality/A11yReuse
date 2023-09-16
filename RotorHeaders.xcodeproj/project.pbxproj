@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74DD8A082AB60D8C0000B368 /* A11yReuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A11yReuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DD8A082AB60D8C0000B368 /* RotorHeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotorHeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DD8A0B2AB60D8C0000B368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DD8A0D2AB60D8C0000B368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		74DD8A0F2AB60D8C0000B368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		74DD89FF2AB60D8C0000B368 = {
 			isa = PBXGroup;
 			children = (
-				74DD8A0A2AB60D8C0000B368 /* A11yReuse */,
+				74DD8A0A2AB60D8C0000B368 /* RotorHeaders */,
 				74DD8A092AB60D8C0000B368 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		74DD8A092AB60D8C0000B368 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74DD8A082AB60D8C0000B368 /* A11yReuse.app */,
+				74DD8A082AB60D8C0000B368 /* RotorHeaders.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74DD8A0A2AB60D8C0000B368 /* A11yReuse */ = {
+		74DD8A0A2AB60D8C0000B368 /* RotorHeaders */ = {
 			isa = PBXGroup;
 			children = (
 				74DD8A0B2AB60D8C0000B368 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				74DD8A162AB60D8E0000B368 /* LaunchScreen.storyboard */,
 				74DD8A192AB60D8E0000B368 /* Info.plist */,
 			);
-			path = A11yReuse;
+			path = RotorHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74DD8A072AB60D8C0000B368 /* A11yReuse */ = {
+		74DD8A072AB60D8C0000B368 /* RotorHeaders */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74DD8A1C2AB60D8E0000B368 /* Build configuration list for PBXNativeTarget "A11yReuse" */;
+			buildConfigurationList = 74DD8A1C2AB60D8E0000B368 /* Build configuration list for PBXNativeTarget "RotorHeaders" */;
 			buildPhases = (
 				74DD8A042AB60D8C0000B368 /* Sources */,
 				74DD8A052AB60D8C0000B368 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = A11yReuse;
+			name = RotorHeaders;
 			productName = A11yReuse;
-			productReference = 74DD8A082AB60D8C0000B368 /* A11yReuse.app */;
+			productReference = 74DD8A082AB60D8C0000B368 /* RotorHeaders.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74DD8A032AB60D8C0000B368 /* Build configuration list for PBXProject "A11yReuse" */;
+			buildConfigurationList = 74DD8A032AB60D8C0000B368 /* Build configuration list for PBXProject "RotorHeaders" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74DD8A072AB60D8C0000B368 /* A11yReuse */,
+				74DD8A072AB60D8C0000B368 /* RotorHeaders */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P67Q4Q7HA9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = A11yReuse/Info.plist;
+				INFOPLIST_FILE = RotorHeaders/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -300,7 +300,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.akaDuality.A11yReuse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akaDuality.RotorHeaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P67Q4Q7HA9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = A11yReuse/Info.plist;
+				INFOPLIST_FILE = RotorHeaders/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.akaDuality.A11yReuse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akaDuality.RotorHeaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74DD8A032AB60D8C0000B368 /* Build configuration list for PBXProject "A11yReuse" */ = {
+		74DD8A032AB60D8C0000B368 /* Build configuration list for PBXProject "RotorHeaders" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74DD8A1A2AB60D8E0000B368 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74DD8A1C2AB60D8E0000B368 /* Build configuration list for PBXNativeTarget "A11yReuse" */ = {
+		74DD8A1C2AB60D8E0000B368 /* Build configuration list for PBXNativeTarget "RotorHeaders" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74DD8A1D2AB60D8E0000B368 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  A11yReuse
+//  RotorHeaders
 //
 //  Created by Mikhail Rubanov on 16.09.2023.
 //
