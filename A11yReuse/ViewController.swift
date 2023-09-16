@@ -7,22 +7,32 @@
 
 import UIKit
 
-class ViewController: UICollectionViewController {
+struct DatasourceOverlay {
     
-    func collectionView() -> CollectionView {
-        collectionView as! CollectionView
-    }
+    let numberOfSections = 50
+    let numberOfRowsInSection = 20
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var elements: [UIAccessibilityElement]
+    
+    init(accessibilityContainer: UIView) {
+        
+        func frame(at path: IndexPath, numberOfRowsInSection: Int) -> CGRect {
+            let height: CGFloat = 60.33
+            let elementIndex = path.section * numberOfRowsInSection + path.row
+            let interitemSpace: CGFloat = 10
+            let y: CGFloat = (height + interitemSpace) * CGFloat(elementIndex)
+            - CGFloat(path.section) * interitemSpace // No space between sections
+            let origin = CGPoint(x: 0, y: y)
+            let size = CGSize(width: accessibilityContainer.frame.width, height: height)
+            let frame = CGRect(origin: origin, size: size)
+            return frame
+        }
         
         var elements = [UIAccessibilityElement]()
         
-        let numberOfRows = 20
-        
-        for section in 0..<50 {
-            for row in 0..<numberOfRows {
-                let element = UIAccessibilityElement(accessibilityContainer: collectionView!)
+        for section in 0..<numberOfSections {
+            for row in 0..<numberOfRowsInSection {
+                let element = UIAccessibilityElement(accessibilityContainer: accessibilityContainer)
                 if row == 0 {
                     element.accessibilityLabel = "Header \(section)"
                     element.accessibilityTraits = [.header]
@@ -31,40 +41,49 @@ class ViewController: UICollectionViewController {
                     element.accessibilityTraits = [.staticText]
                 }
                 
-                let height: CGFloat = 60.33
-                let elementIndex = section * numberOfRows + row
-                let interitemSpace: CGFloat = 10
-                let y: CGFloat = (height + interitemSpace) * CGFloat(elementIndex)
-                - CGFloat(section) * interitemSpace // No space between sections
-                let origin = CGPoint(x: 0, y: y)
-                let size = CGSize(width: view.frame.width, height: height)
-                let frame = CGRect(origin: origin, size: size)
-                element.accessibilityFrameInContainerSpace = frame
+                let path = IndexPath(row: row, section: section)
+                element.accessibilityFrameInContainerSpace = frame(at: path,
+                                                                   numberOfRowsInSection: numberOfRowsInSection)
                 
                 elements.append(element)
             }
         }
         
-        collectionView().elements = elements
+        self.elements = elements
     }
+}
 
+class ViewController: UICollectionViewController {
+    
+    func collectionView() -> CollectionView {
+        collectionView as! CollectionView
+    }
+    
+    private var datasourceOverlay: DatasourceOverlay!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        datasourceOverlay = DatasourceOverlay(accessibilityContainer: collectionView!)
+        collectionView().elements = datasourceOverlay.elements
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        50
+        datasourceOverlay.numberOfSections
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        datasourceOverlay.numberOfRowsInSection
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
         
+        // TODO: Read value from datasource
         if indexPath.row == 0 {
             cell.text = "Header \(indexPath.section)"
-            cell.accessibilityTraits = [.header]
         } else {
             cell.text = "Section \(indexPath.section), row \(indexPath.row)"
-            cell.accessibilityTraits = [.staticText]
         }
         
 //        print("Frame \(cell.frame) an \(indexPath)")
